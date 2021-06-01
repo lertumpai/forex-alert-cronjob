@@ -47,7 +47,7 @@ cron.schedule('*/10 * * * *', async () => {
 })
 
 // start socket
-cron.schedule('*/15 * * * *', async () => {
+cron.schedule('*/5 * * * *', async () => {
   try {
     await axios.post(
       `${SERVER_URL}/jobs/startSocketProductPrice`,
