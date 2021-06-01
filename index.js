@@ -45,3 +45,22 @@ cron.schedule('*/10 * * * *', async () => {
     console.log(e)
   }
 })
+
+// start socket
+cron.schedule('* */1 * * *', async () => {
+  try {
+    await axios.post(
+      `${SERVER_URL}/jobs/startSocketProductPrice`,
+      {
+        key,
+      }, {
+        withCredentials: true,
+        headers: {
+          'Access-Control-Allow-Origin': '*'
+        }
+      })
+    log('startSocketProductPrice')
+  } catch (e) {
+    console.log(e)
+  }
+})
