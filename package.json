@@ -1,6 +1,6 @@
 {
   "name": "forex-alert-cronjob",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "dependencies": {
     "axios": "^0.21.1",
     "node-cron": "^3.0.0"
